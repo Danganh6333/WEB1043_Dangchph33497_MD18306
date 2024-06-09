@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var sv = new Object();
+        sv.hoTen = prompt("Họ và tên");
+        var Diem = prompt("Điểm");
+        sv.diem = parseInt(Diem);
+        sv.hocLuc = null;
+        sv.hienThi = function() {
+            if (this.diem >= 5) {
+               this.hocLuc = 'Đậu';
+            } else {
+               this.hocLuc = 'Rớt';
+            }
+            document.write("<h3>Họ và tên: "+this.hoTen+"</h3>");
+            document.write("<h3>Điểm TB: "+this.diem+"</h3>");
+            document.write("<h3>Học lực: "+this.hocLuc+"</h3>");
+        }
+    </script>
+    <button onclick="sv.hienThi();">Hiển thị</button> 
+</body>
+
+</html>

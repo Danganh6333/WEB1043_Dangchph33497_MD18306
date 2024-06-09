@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="shopping_cart_slider_jquery.css">
+</head>
+<body>
+  <div class="header">
+    <h1 class="ten_header">Cửa Hàng Hoa Quả</h1>
+    <div class="gioHang" onclick="gioHang()" style="cursor: pointer;">Xem Giỏ hàng</i>
+      <p id="tong">0</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="flex">
+      <div class="flex-item" onmouseenter="hienThi(1)">
+        <img src="img/chuoi1.jpg" width="80%" id="slideshow" onclick="chay(0)">
+        <h3 class="item_text" >Sản phẩm 1</h3>
+        <div id="text1" class="name" style="display: none;">
+          Giá tiền:<h5 id="giaTien" style="display: inline;">1000000</h5>
+          <hr>
+          <p id="moTa">Mô tả:Chuối</p>
+          <hr>
+          <div id="price">
+            <label for="">Số lượng</label>
+            <input type="number" name="" class="soluong" min="1">
+            <span style="padding: 60px;" id="loi_soluong"></span>
+          </div>
+        </div>
+        <button id="them">Thêm vào giỏ hàng</button>
+      </div>
+      <div class="flex-item" onmouseenter="hienThi(2)">
+        <img src="img/dua1.jpg" width="80%" id="slideshow1" onclick="chay(1)">
+        <h3 class="item_text">Sản phẩm 2</h3>
+        <div id="text2" class="name" style="display: none;">
+          Giá tiền:<h5 id="giaTien" style="display: inline;">2000000</h5>
+          <hr>
+          <p id="moTa">Mô tả:Dưa chuột</p>
+          <hr>
+          <div id="price">
+            <label for="">Số lượng</label>
+            <input type="number" name="" id="soluong" min="1">
+            <span style="padding: 60px;" id="loi_soluong"></span>
+          </div>
+        </div> 
+        <button id="them">Thêm vào giỏ hàng</button>
+      </div>
+      <div class="flex-item" onmouseenter="hienThi(3)">
+        <img src="img/bom1.jpg" width="80%" id="slideshow2" onclick="chay(2)">
+        <h3 class="item_text">Sản phẩm 3</h3>
+        <div id="text3" class="name" style="display: none;">
+          Giá tiền:<h5 id="giaTien" style="display: inline;">2000000</h5>
+          <hr>
+          <p id="moTa">Mô tả:Táo</p>
+          <hr>
+          <div id="price" class="giaTien">
+            <label for="">Số lượng</label>
+            <input type="number" name="" id="soluong" min="1">
+            <span style="padding: 60px;" id="loi_soluong"></span>
+          </div>
+        </div>
+        <button id="them">Thêm vào giỏ hàng</button>
+      </div>
+      <div class="flex-item" onmouseenter="hienThi(4)">
+        <img src="img/cachua1.jpg" width="80%" id="slideshow3" onclick="chay(3)">
+        <h3 class="item_text">Sản phẩm 4</h3>
+        <div id="text4" style="display: none;">
+          Giá tiền:<h5 id="giaTien" style="display: inline;">2000000</h5>
+          <hr>
+          <p id="moTa">Mô tả:Cà chua</p>
+          <hr>
+          <div id="price" class="giaTien">
+            <label for="">Số lượng</label>
+            <input type="number" name="" id="soluong" class="ammount" min="1">
+            <span style="padding: 60px;" id="loi_soluong"></span>
+          </div>
+        </div>
+        <button id="them">Thêm vào giỏ hàng</button>
+      </div>
+    </div>
+  </div>
+  <section class="cart" id="cart1" style="display: none;">
+    <h2>Giỏ hàng</h2>
+    <form action="">
+      <table>
+        <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Chọn</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img style="width: 80px;" src="./img/chuoi1.jpg" alt="">Sản Phẩm 1</td>
+            <td><p><span>1000000</span>VND</p></td>
+            <td><p><span>1</span></p></td>
+            <td style="cursor:pointer"> Xóa</td>
+          </tr>
+          <tr>
+            <td><img style="width: 80px;" src="./img/bom1.jpg" alt="">Sản Phẩm 2</td>
+            <td><p><span>1000000</span>VND</p></td>
+            <td><p><span>1</span></p></td>
+            <td style="cursor:pointer"> Xóa</td>
+          </tr>
+          <tr>
+            <td><img style="width: 80px;" src="./img/dua1.jpg" alt="">Sản Phẩm 3</td>
+            <td><p><span>1000000</span>VND</p></td>
+            <td><p><span>1</span></p></td>
+            <td style="cursor:pointer"> Xóa</td>
+          </tr>
+          <tr>
+            <td><img style="width: 80px;" src="./img/cachua1.jpg" alt="">Sản Phẩm 3</td>
+            <td><p><span>1000000</span>VND</p></td>
+            <td><p><span>1</span></p></td>
+            <td style="cursor:pointer"> Xóa</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: right;" class="tong-tien">
+        <p style="font-weight: bold; " >Tổng tiền:<p><span id="texts"></span>VND</p></p>
+      </div>
+    </form>
+  </section>
+  <script type="text/javascript" src="./shopping_cart_slider_jquery.js">
+  </script>
+</body>
+
+</html>

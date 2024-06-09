@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="anh" src="img/0.png">
+    <hr>
+    <button onclick="first()">First</button>
+    <button onclick="next()">Next</button>
+    <button onclick="prev()">Previous</button>
+    <button onclick="last()">Last</button>
+    <script type="text/javascript">
+        var images = [];
+        for (let index = 0; index <= 5; index++) {
+            images[index] = new Image();
+            images[index].src = "img/" +index +".PNG";
+        }
+        var index = 0;
+        function first(){
+            index = 0;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+        function last(){
+            index = images.length -1;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+        function next(){
+            index++;
+            if(index>=images){
+                index = 0
+            }
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+        function prev(){
+            index --;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+    </script>
+</body>
+</html>

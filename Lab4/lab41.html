@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var main = [];
+        var laptop1 = new Object();
+        var laptop2 = new Object();
+        var laptop3 = new Object();
+
+        laptop1 = {
+            name: "Aspire A315-510P",
+            model: " A315-510P-37W1",
+            cost: 399.00,
+            quantity: 2
+        };
+        laptop2 = {
+            name: "Nitro 17 AN17-41-R5Y5 Gaming Notebook",
+            model: "  AN17-41-R5Y5",
+            cost: 1.800,
+            quantity: 6
+        };
+        laptop3 = {
+            name: "TravelMate P2 14 Intel",
+            model: " TMP214-55-58BP ",
+            cost: 949.99,
+            quantity: 4
+        }
+        main.push(laptop1);
+        main.push(laptop2);
+        main.push(laptop3);
+        function xuat(main) {
+            console.log("In mảng");
+            for (const item of main) {
+                console.log(item);
+            }
+        }
+        xuat(main);
+        for (var i = 0; i < main.length; i++) {
+            if (i == 2) {
+                console.log("Quantity element của item thứ 3: "+main[i].quantity);
+            }
+        }
+        var laptop4 = {
+            name: 'Aspire 3 Laptop',
+            model: 'A315-24PT-R8W1',
+            cost: 399.99,
+            quantity: 5,
+        };
+        main.push(laptop4);
+        xuat(main);
+    </script>
+</body>
+
+</html>

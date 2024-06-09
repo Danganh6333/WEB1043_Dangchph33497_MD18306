@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let MyWindow;
+        function Mo(){
+            MyWindow = window.open("./Window.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,width=400,height=400");
+        }
+        function Dong(){
+            MyWindow.close();
+        }
+        function KiemTra(){
+            if(MyWindow.closed){
+                alert("Bạn đã đóng");
+            }else{
+                alert("Bạn chưa đóng");
+            }
+        }
+    </script>
+    <button  onclick="Mo()">Mở cửa sổ mới</button>
+    <button  onclick="Dong()">Đóng cửa sổ mới</button>
+    <button  onclick="KiemTra()">Kiểm tra cửa sổ mới đã đóng hay chưa</button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-weight: bold;
+    }
+    button{
+        width: 70px;
+        height: 70px;
+        box-shadow: inset;
+        margin: 2px;
+    }
+    h1{
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <script type="text/javascript" src="./lab33.js">
+
+    </script>
+    <div class="calculator">
+        <h1>Máy Tính</h1>
+        <div class="row">
+            <button onclick="toan_hang(7)">7</button>
+            <button onclick="toan_hang(8)">8</button>
+            <button onclick="toan_hang(9)">9</button>
+            <button onclick="toan_tu('+')">+</button>
+        </div>
+        <div class="row">
+            <button onclick="toan_hang(4)">4</button>
+            <button onclick="toan_hang(5)">5</button>
+            <button onclick="toan_hang(6)">6</button>
+            <button onclick="toan_tu('-')">-</button>
+        </div>
+        <div class="row">
+            <button onclick="toan_hang(1)">1</button>
+            <button onclick="toan_hang(2)">2</button>
+            <button onclick="toan_hang(3)">3</button>
+            <button onclick="toan_tu('*')">x</button>
+        </div>
+        <div class="row">
+            <button onclick="toan_hang(0)">0</button>
+            <button onclick="lam_lai()">C</button> 
+            <button onclick="thuc_hien ()">=</button>
+            <button onclick="toan_tu('/')">:</button> 
+        </div>
+    </div>
+</body>
+</html>

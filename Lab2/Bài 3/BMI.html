@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var weight = prompt("Mời nhập trọng lượng cơ thể");
+        var height = prompt("Mời nhập chiều cao");
+        var bmi = weight / (height * height);
+        if (bmi < 18.5) {
+            alert("bạn đang bị thiếu cân " + bmi);
+        }
+        else if (bmi >= 18.5 && bmi < 25) {
+            alert("bạn bình thường " + bmi);
+        }
+        else if (bmi >= 25 && bmi < 30) {
+            alert("bạn đang bị thừa cân " + bmi);
+        }
+        else {
+            alert("bạn đang bị béo phì " + bmi);
+        }
+    </script>
+</body>
+
+</html>

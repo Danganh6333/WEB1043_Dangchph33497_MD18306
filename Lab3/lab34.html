@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script type="text/javascript">
+  var arr = ['Rock', 'Paper', 'Scissors'];
+  var c = null;
+  function getValue(choice) {
+    var s = Math.floor(Math.random() * 3);
+    var random = arr[s];
+    c = arr[choice];
+    if (choice == 0) {
+      alert('Bạn chọn Đá')
+    } else if (choice == 1) {
+      alert('Bạn chọn Giấy')
+    } else if (choice == 2) {
+      alert('Bạn chọn kéo')
+    }
+    maytinh(c,random)
+  }
+  function maytinh(c,random) {
+    var x = c;
+    if (x === random) {
+      alert('Hòa')
+    } else if (x === "Rock" && random === "Scissors" || x === "Paper" && random === "Rock" || x === "Scissors" && random === "Paper") {
+      alert('Bạn thăng');
+    } else {
+      alert('Bạn thua');
+    }
+  }
+</script>
+<body>
+  <h1>Trò chơi kéo búa bao</h1>
+  <input type="button" value="Rock" onclick="getValue(0);" />
+  <input type="button" value="Paper" onclick="getValue(1);" />
+  <input type="button" value="Scissors" onclick="getValue(2);" />
+</body>
+</html>

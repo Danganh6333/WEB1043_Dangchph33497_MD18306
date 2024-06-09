@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width: 120px;
+    }
+    button{
+        width: fit-content;
+    }
+</style>
+<body>
+<div id="Value">
+    <form action="anotherpage.html" method="get" onsubmit="return valForm()" style="display: flex;flex-direction: column;">
+         <input placeholder="First name" name="firstname" id="firstname" type="text">
+         <input placeholder="Last name" id="lastName" name="lastName" type="text">
+         <input placeholder="Age" id="age" name="age" text="text">
+         <button type="submit">submit</button>
+    </form>
+</div>
+    <script>
+        function valForm(){
+            var p = event.target.children;
+            if(p.firstname.value == ""){
+                message("Need a first name");
+                return false;
+            }
+            if(p.lastName.value == ""){
+                message("Need a last name");
+                return false;
+            }
+            if(p.age.value == ""){
+                message("Need a age");
+                return false;
+            }
+            return true;
+        }
+        function message(m){
+            document.getElementById("Value").innerHTML = m;
+        }
+    </script>
+</body>
+</html>

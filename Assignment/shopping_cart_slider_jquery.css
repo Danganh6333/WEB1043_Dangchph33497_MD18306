@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    float: inline-end;
+    margin: 16px;
+  }
+
+  .flex-item {
+    width: 300px;
+    height: auto;
+    border: 3px solid salmon;
+
+  }
+
+  .item_text {
+    border-top: 3px solid orange;
+  }
+
+  .container {
+    margin-top: 5%;
+  }
+
+  p  {
+    margin: 8px;
+  }
+  h5{
+    margin: 9px;
+    font-weight: lighter;
+  }
+
+  #price {
+    margin: 9px;
+  }
+  .header{
+    background-color: aqua;
+    height: 95px;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px;
+  }
+  .header .ten_header{
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+  }
+  .gioHang{
+    display: flex;
+    background-color: azure;
+    justify-content:space-between;
+    align-items: center;
+    padding:7px 10px ;
+    border-radius: 5px;
+    width: 182px;
+  }
+  .gioHang p {
+    height: 28px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 17px;
+    background-color: green;
+    color: antiquewhite;
+  }
+  h3{
+    margin-top: 6px;
+  }
+  .cart{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .cart h2{
+    margin-bottom: 20px;
+  }
+  .cart table{
+    width: 100%;
+  }
+  .cart table thead tr th:first-child{
+    text-align: left;
+  }
+  .cart table tr th:last-child{
+    text-align: right;
+  }
+  .cart table tbody thead tr td:last-child{
+    text-align: right;
+  }
+  .cart table tr td{
+    border-bottom: 1px solid wheat;
+    padding: 20px 0px;
+  }
+  @media screen and (max-width:1252px) {
+    .flex {
+      flex-wrap: wrap;
+    }
+  }
